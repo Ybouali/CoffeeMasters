@@ -1,4 +1,6 @@
+import 'package:coffeemasters/pages/menupage.dart';
 import 'package:coffeemasters/pages/offerspage.dart';
+import 'package:coffeemasters/pages/ortherpage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -21,7 +23,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-
 // class HelloWidget extends StatefulWidget {
 
 //   const HelloWidget({super.key});
@@ -31,9 +32,9 @@ class MyApp extends StatelessWidget {
 // }
 
 // class _HelloWidgetState extends State<HelloWidget> {
-  
+
 //   String name = 'Yassine';
-  
+
 //   @override
 //   Widget build(BuildContext context) {
 
@@ -70,7 +71,9 @@ class MyApp extends StatelessWidget {
 // }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key,});
+  const MyHomePage({
+    super.key,
+  });
 
   final String title = 'Coffee Masters';
 
@@ -79,18 +82,48 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  var selectedPage = 0;
+
   @override
   Widget build(BuildContext context) {
+    Widget currentPage = const MenuPage();
+
+    switch (selectedPage) {
+      case 0:
+        currentPage = const MenuPage();
+        break;
+      case 1:
+        currentPage = const OffersPage();
+        break;
+      case 2:
+        currentPage = const OrtherPage();
+        break;
+    }
+
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Image.asset(
-          "assets/images/logo.png",
-          // width: 44,
-          // height: 44,
-          )
-      ),
-      body: const OffersPage(),
+          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+          title: Image.asset(
+            "assets/images/logo.png",
+            // width: 44,
+            // height: 44,
+          )),
+      bottomNavigationBar: BottomNavigationBar(
+          currentIndex: selectedPage,
+          onTap: (index) => setState(() {
+                selectedPage = index;
+              }),
+          backgroundColor: Theme.of(context).primaryColor,
+          selectedItemColor: Colors.yellow.shade800,
+          unselectedItemColor: Colors.yellow.shade100,
+          items: const [
+            BottomNavigationBarItem(icon: Icon(Icons.coffee), label: "Menu"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.local_offer), label: "Offers"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.shop_2_sharp), label: "Orther"),
+          ]),
+      body: currentPage,
     );
   }
 }

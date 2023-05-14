@@ -5,12 +5,194 @@ class OffersPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Offer(title: "Coffee taliano", description: "Buy 1, get 3 for free");
+    return ListView(
+      children: const [
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+        Offer(
+          title: "Coffee taliano", description: "Buy 1, get 3 for free"
+        ),
+      ],
+    );
   }
 }
 
 class Offer extends StatelessWidget {
-
   final String title;
   final String description;
 
@@ -22,27 +204,34 @@ class Offer extends StatelessWidget {
       height: 100,
       child: Card(
         elevation: 7,
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Center(
-                child: Text(
+        color: Colors.amber.shade400,
+        child: Container(
+          decoration: const BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage(
+                  'assets/images/background.png',
+          ))),
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Center(
+                    child: Text(
                   title,
                   style: Theme.of(context).textTheme.headlineLarge,
-                )
+                )),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Center(
-                child: Text(
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Center(
+                    child: Text(
                   description,
                   style: Theme.of(context).textTheme.bodySmall,
-                )
-              ),
-            )
-          ],
+                )),
+              )
+            ],
+          ),
         ),
       ),
     );
