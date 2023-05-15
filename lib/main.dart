@@ -1,3 +1,4 @@
+import 'package:coffeemasters/data/datamanager.dart';
 import 'package:coffeemasters/pages/menupage.dart';
 import 'package:coffeemasters/pages/offerspage.dart';
 import 'package:coffeemasters/pages/ortherpage.dart';
@@ -23,53 +24,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// class HelloWidget extends StatefulWidget {
-
-//   const HelloWidget({super.key});
-
-//   @override
-//   State<HelloWidget> createState() => _HelloWidgetState();
-// }
-
-// class _HelloWidgetState extends State<HelloWidget> {
-
-//   String name = 'Yassine';
-
-//   @override
-//   Widget build(BuildContext context) {
-
-//     var style = const TextStyle( fontSize: 30 );
-
-//     return Column(
-//       children: [
-//         Padding(
-//           padding: const EdgeInsets.only(left: 16.0, top: 30),
-//           child: Row(
-//             children: [
-//               Text(
-//                 'Hello, $name',
-//                 style: style,
-//               ),
-//               Text(
-//                 '!!!!',
-//                 style: style,
-//               ),
-//             ],
-//           ),
-//         ),
-//         Padding(
-//           padding: const EdgeInsets.only(left: 50.0),
-//           child: TextField(
-//             onChanged: (value) => setState(() {
-//               name = value;
-//             }),
-//           ),
-//         ),
-//       ],
-//     );
-//   }
-// }
-
 class MyHomePage extends StatefulWidget {
   const MyHomePage({
     super.key,
@@ -83,20 +37,21 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   var selectedPage = 0;
+  var dataManager = DataManager();
 
   @override
   Widget build(BuildContext context) {
-    Widget currentPage = const MenuPage();
+    Widget currentPage = const Text("test !!");
 
     switch (selectedPage) {
       case 0:
-        currentPage = const MenuPage();
+        currentPage = MenuPage(dataManager: dataManager);
         break;
       case 1:
         currentPage = const OffersPage();
         break;
       case 2:
-        currentPage = const OrtherPage();
+        currentPage = OrtherPage(dataManager: dataManager);
         break;
     }
 
