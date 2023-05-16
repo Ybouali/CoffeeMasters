@@ -3,7 +3,7 @@ class Product {
   String name;
   double price;
   String image;
-  String get imageUrl => "https://firtman.github.io/coffeemasters/api/$image";
+  String get imageUrl => "https://firtman.github.io/coffeemasters/api/images/$image";
 
   Product({
     required this.id,
@@ -31,7 +31,7 @@ class Category {
     required this.products,
   });
 
-  factory Category.fromJSON(Map<String, Product> json) {
+  factory Category.fromJson(Map<String, dynamic> json) {
     var productsJson = json['products'] as Iterable<dynamic>;
     var products = productsJson.map((p) => Product.fromJSON(p)).toList();
     return Category(name: json['name'] as String, products: products);
