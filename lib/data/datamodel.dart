@@ -38,12 +38,9 @@ class Category {
   }
 }
 
-class ItemInCard {
+class ItemInCart {
   Product product;
   int quantity;
 
-  ItemInCard({
-    required this.product,
-    required this.quantity,
-  });
+  ItemInCart({ required this.product, required this.quantity });
 }

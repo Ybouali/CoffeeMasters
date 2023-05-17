@@ -4,17 +4,11 @@ import 'package:flutter/material.dart';
 
 class MenuPage extends StatelessWidget {
   final DataManager dataManager;
+
   const MenuPage({super.key, required this.dataManager});
 
   @override
   Widget build(BuildContext context) {
-    // var product1 = Product(
-    //   id: 1,
-    //   name: "Coffee",
-    //   price: 0.99,
-    //   image: "Coffee",
-    // );
-
     return FutureBuilder(
         future: dataManager.getMenu(),
         builder: (context, snapshot) {
@@ -36,11 +30,10 @@ class MenuPage extends StatelessWidget {
                           itemBuilder: ((context, indexP) {
                             Product product =
                                 listCategory[indexC].products[indexP];
-
                             return ProductItem(
                                 product: product,
-                                onAdd: () {
-                                  dataManager.cardAdd(product);
+                                onAdd: (addedProduct) {
+                                  dataManager.cardAdd(addedProduct);
                                 });
                           })),
                     ],
@@ -50,7 +43,14 @@ class MenuPage extends StatelessWidget {
             if (snapshot.hasError) {
               return const Text("There was an error !! ");
             } else {
-              return const CircularProgressIndicator();
+              return const Center(
+                child: CircularProgressIndicator(
+                  backgroundColor: Colors.grey,
+                  valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),
+                  strokeWidth: 5.0, 
+                  semanticsLabel: 'Loading',
+                )
+              );
             }
           }
         });
@@ -91,7 +91,7 @@ class ProductItem extends StatelessWidget {
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Text("\$ ${product.price}"),
+                      child: Text("\$ ${product.price.toStringAsFixed(2)}"),
                     ),
                   ],
                 ),
@@ -101,7 +101,7 @@ class ProductItem extends StatelessWidget {
                     onPressed: () {
                       onAdd(product);
                     },
-                    child: const Text("Add"),
+                    child: const Text("Add")
                   ),
                 )
               ],

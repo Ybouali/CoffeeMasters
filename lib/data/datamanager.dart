@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 
 class DataManager {
   List<Category>? _menu;
-  List<ItemInCard> cart = [];
+  List<ItemInCart> cart = [];
 
   fetchMenu() async {
     const url = "https://firtman.github.io/coffeemasters/api/menu.json";
@@ -17,7 +17,7 @@ class DataManager {
       var body = response.body;
       var decodedData = jsonDecode(body) as List<dynamic>;
       for (var json in decodedData) {
-        _menu!.add(Category.fromJson(json));
+        _menu?.add(Category.fromJson(json));
       }
     }
   }
@@ -27,14 +27,16 @@ class DataManager {
     return _menu!;
   }
 
-  cardAdd(Product product) {
+  cardAdd(Product p) {
     bool found = false;
     for (var item in cart) {
-      if (item.product.id == product.id) {
+      if (item.product.id == p.id) {
         item.quantity++;
         found = true;
       }
-      if (!found) cart.add(ItemInCard(product: product, quantity: 1));
+    }
+    if (!found) {
+      cart.add(ItemInCart(product: p, quantity: 1));
     }
   }
 
